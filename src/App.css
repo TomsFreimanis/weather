@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+    font-size: 1.6rem;
+
+}
+h1 {
+    font-size: 6rem;
+
+}
+.app .search {
+  
+    text-align: center;
+    padding-top: 3rem;
+}
+.app input {
+    
+    padding: .9rem 1.6rem;
+    font-size: 1.4rem;
+    border-radius: 25px;
+    border: 2px solid rgb(255, 255, 255, 0.8);
+    background: rgba(232, 227, 227, 0.1);
+    color: rgb(255, 255, 255);
+    
+    
+}
+.app input:hover {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(250, 218, 218, 0.8);
+    color: black;
+
+}
+::placeholder {
+    color: rgb(0, 0, 0);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.app {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(0,0,0,0.3);
+    color: rgb(250, 250, 250)
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app::before {
+    content: '';
+    background: url('./assets/winter2.webp') no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index: -1;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+    max-width: 600px;
+    height:500px;
+    margin: auto;
+    padding: 0 1rem;
+    position: relative;
+    top:10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app .top {
+    
+    width: 100%;
+    margin: 1rem auto;
+
+}
+
+.app .description {
+    position: relative;
+    right: -90%;
+    transform-origin:0 0;
+    transform: rotate(269deg);
+}
+
+.app .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 23px;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.bold {
+    font-weight: 700;
 }
